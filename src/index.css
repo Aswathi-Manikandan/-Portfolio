@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+:root {
+  color-scheme: light;
+
+  --body-bg: #FFFCF7;
+  --navbar-bg: #FFFFFF;
+  --card-bg: #FFFFFF;
+
+  --heading-color: #383344;
+  --text-color: #514B5E;
+  --muted-color: #898393;
+
+  --border-color: #F0EAF4;
+  --accent-color: #8571AD;
+
+  --section-bg: #FFFCF7;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --body-bg: #191721;
+  --navbar-bg: #211F2B;
+  --card-bg: #282532;
+
+  --heading-color: #F4EFFB;
+  --text-color: #D8D1E2;
+  --muted-color: #B1A9BD;
+
+  --border-color: #393445;
+  --accent-color: #B7A2E0;
+
+  --section-bg: #191721;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* DARK THEME - PORTFOLIO SECTIONS */
+
+[data-theme="dark"] .home,
+[data-theme="dark"] .about,
+[data-theme="dark"] .skills,
+[data-theme="dark"] .projects,
+[data-theme="dark"] .education,
+[data-theme="dark"] .contact {
+  background-color: var(--body-bg);
+}
+
+/* HEADINGS AND TEXT */
+
+[data-theme="dark"] .home h1,
+[data-theme="dark"] .home h2,
+[data-theme="dark"] .about h2,
+[data-theme="dark"] .about h3,
+[data-theme="dark"] .skills h2,
+[data-theme="dark"] .skills h3,
+[data-theme="dark"] .projects h2,
+[data-theme="dark"] .projects h3,
+[data-theme="dark"] .education h2,
+[data-theme="dark"] .education h3,
+[data-theme="dark"] .contact h2,
+[data-theme="dark"] .contact h3 {
+  color: var(--heading-color);
+}
+
+[data-theme="dark"] .home p,
+[data-theme="dark"] .about p,
+[data-theme="dark"] .skills p,
+[data-theme="dark"] .projects p,
+[data-theme="dark"] .education p,
+[data-theme="dark"] .contact p {
+  color: var(--muted-color);
+}
+
+/* CARDS */
+
+[data-theme="dark"] .about-card,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .education-card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+/* SKILL CARDS */
+
+[data-theme="dark"] .skill-category {
+  background-color: var(--card-bg);
+}
+
+/* SKILL TAGS */
+
+[data-theme="dark"] .skill-list span,
+[data-theme="dark"] .project-technologies span {
+  background-color: #393445;
+  color: #E4D9F5;
+}
+
+/* CONTACT CARDS */
+
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .contact-note-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .contact-card-icon {
+  background-color: #393445;
+  color: #C5B1E8;
+}
+
+[data-theme="dark"] .contact-card-label,
+[data-theme="dark"] .contact-email {
+  color: var(--muted-color);
+}
+
+/* FOOTER */
+
+[data-theme="dark"] .footer {
+  background-color: #211F2B;
+}
+
+[data-theme="dark"] .footer h2,
+[data-theme="dark"] .footer h3 {
+  color: var(--heading-color);
+}
+
+[data-theme="dark"] .footer p,
+[data-theme="dark"] .footer a {
+  color: var(--muted-color);
+}
+
+[data-theme="dark"] .footer-bottom {
+  border-color: var(--border-color);
+}
