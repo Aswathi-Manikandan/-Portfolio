@@ -4,10 +4,12 @@ import '../styles/Navbar.css'
 
 const Navbar = () => {
 
+  // Dark and light theme state
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem('portfolio-theme') === 'dark'
   })
 
+  // Mobile menu state
   const [menuOpen, setMenuOpen] = useState(false)
 
   // Apply theme to the entire website
@@ -23,7 +25,7 @@ const Navbar = () => {
     )
   }, [darkMode])
 
-  // Toggle dark and light themes
+  // Toggle theme
   const toggleTheme = () => {
     setDarkMode(prevMode => !prevMode)
   }
@@ -36,12 +38,28 @@ const Navbar = () => {
   return (
     <nav className="navbar">
 
-      {/* Logo */}
-      <a href="#home" className="navbar-logo" onClick={closeMenu}>
-        Aswathi<span>.</span>
+      {/* BRAND LOGO */}
+
+      <a
+        href="#home"
+        className="navbar-brand"
+        onClick={closeMenu}
+        aria-label="Aswathi Manikandan - Home"
+      >
+
+        <img
+          src="/images/am-logo.png"
+          alt="AM - Aswathi Manikandan logo"
+          className="navbar-logo"
+        />
+
+        
+
       </a>
 
-      {/* Navigation Links */}
+
+      {/* NAVIGATION LINKS */}
+
       <ul className={`navbar-links ${menuOpen ? 'active' : ''}`}>
 
         <li>
@@ -70,17 +88,25 @@ const Navbar = () => {
 
       </ul>
 
-      {/* Theme Toggle */}
+
+      {/* THEME TOGGLE */}
+
       <button
         className="theme-toggle"
         onClick={toggleTheme}
-        aria-label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
-        title={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
+        aria-label={
+          darkMode ? 'Switch to light theme' : 'Switch to dark theme'
+        }
+        title={
+          darkMode ? 'Switch to light theme' : 'Switch to dark theme'
+        }
       >
         {darkMode ? '☀️' : '🌙'}
       </button>
 
-      {/* Mobile Menu Button */}
+
+      {/* MOBILE MENU BUTTON */}
+
       <button
         className="menu-toggle"
         onClick={() => setMenuOpen(prev => !prev)}

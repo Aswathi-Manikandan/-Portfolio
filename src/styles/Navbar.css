@@ -5,76 +5,127 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+
+    padding: 15px 8%;
+
     background-color: var(--navbar-bg);
     border-bottom: 1px solid var(--border-color);
+
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.3s ease;
+
+    transition: background-color 0.3s ease,
+        border-color 0.3s ease;
 }
 
-/* LOGO */
+
+/* BRAND SECTION */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+
+/* AM LOGO IMAGE */
 
 .navbar-logo {
-    font-size: 27px;
-    font-weight: 700;
-    color: var(--heading-color);
-    text-decoration: none;
-    letter-spacing: -1px;
+    width: 100px;
+    height: 80px;
+
+    object-fit: contain;
+    display: block;
+
+    transition: transform 0.3s ease;
 }
 
-.navbar-logo span {
-    color: #A28CCB;
+.navbar-brand:hover .navbar-logo {
+    transform: scale(1.08);
 }
+
+
+/* BRAND NAME */
+
+.logo-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--heading-color);
+    letter-spacing: -0.5px;
+
+    transition: color 0.3s ease;
+}
+
 
 /* NAVIGATION LINKS */
 
 .navbar-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
+
     list-style: none;
 }
 
 .navbar-links a {
     text-decoration: none;
+
     color: var(--text-color);
     font-size: 14px;
     font-weight: 500;
-    transition: color 0.3s ease;
+
     position: relative;
+
+    transition: color 0.3s ease;
 }
+
+
+/* LINK HOVER EFFECT */
 
 .navbar-links a::after {
     content: '';
+
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -7px;
+
     width: 0;
     height: 2px;
-    background-color: #A28CCB;
+
+    background-color: var(--accent-color);
+
     transition: width 0.3s ease;
 }
 
 .navbar-links a:hover {
-    color: #A28CCB;
+    color: var(--accent-color);
 }
 
 .navbar-links a:hover::after {
     width: 100%;
 }
 
-/* THEME TOGGLE */
+
+/* THEME TOGGLE BUTTON */
 
 .theme-toggle {
     width: 42px;
     height: 42px;
+
     border: 1px solid var(--border-color);
     border-radius: 50%;
+
     background-color: var(--card-bg);
+
     font-size: 19px;
     cursor: pointer;
+
     transition: transform 0.3s ease,
         background-color 0.3s ease;
 }
@@ -83,23 +134,28 @@
     transform: rotate(20deg);
 }
 
+
 /* MOBILE MENU BUTTON */
 
 .menu-toggle {
     display: none;
+
     border: none;
     background: transparent;
+
     color: var(--heading-color);
+
     font-size: 25px;
     cursor: pointer;
 }
 
+
 /* TABLET RESPONSIVE */
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
     .navbar {
-        padding: 18px 5%;
+        padding: 15px 5%;
     }
 
     .navbar-links {
@@ -107,39 +163,56 @@
     }
 
     .navbar-links a {
-        font-size: 12px;
+        font-size: 13px;
+    }
+
+    .logo-name {
+        font-size: 16px;
     }
 
 }
 
+
 /* MOBILE RESPONSIVE */
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
 
     .navbar {
-        padding: 16px 5%;
+        padding: 13px 5%;
     }
 
     .navbar-logo {
-        font-size: 24px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-name {
+        font-size: 15px;
     }
 
     .menu-toggle {
         display: block;
+        margin-left: 15px;
     }
 
     .navbar-links {
         display: none;
+
         position: absolute;
         top: 100%;
         left: 0;
+
         width: 100%;
+
         flex-direction: column;
         align-items: center;
         gap: 25px;
+
         padding: 30px 20px;
+
         background-color: var(--navbar-bg);
         border-bottom: 1px solid var(--border-color);
+
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     }
 
@@ -153,7 +226,26 @@
 
     .theme-toggle {
         margin-left: auto;
-        margin-right: 18px;
+    }
+
+}
+
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 380px) {
+
+    .logo-name {
+        font-size: 13px;
+    }
+
+    .navbar-logo {
+        width: 39px;
+        height: 39px;
+    }
+
+    .navbar-brand {
+        gap: 7px;
     }
 
 }
