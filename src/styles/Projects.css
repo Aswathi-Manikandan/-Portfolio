@@ -91,3 +91,20 @@
     font-size: 14px;
     font-weight: 600;
 }
+
+.project-status-button {
+    padding: 10px 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-status-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}

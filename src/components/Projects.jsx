@@ -9,18 +9,20 @@ const Projects = () => {
     {
       title: 'Personal Portfolio Website',
       description:
-        'A responsive personal portfolio to showcase my technical skills, education, projects and development journey.',
-      technologies: ['React', 'JavaScript', 'CSS'],
+        'A modern and responsive personal portfolio showcasing my profile, technical skills, education, projects and development journey.',
+      technologies: ['React', 'JavaScript', 'CSS', 'Vite'],
       githubLink: '',
-      liveLink: ''
+      liveLink: 'https://portfolio-eta-vert-64.vercel.app/',
+      status: 'completed'
     },
     {
       title: 'Driving School Website',
       description:
-        'A website concept for a driving school to present its courses, services, contact information and other details.',
+        'A website project planned to help a driving school showcase its courses, services, contact information and other important details.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       githubLink: '',
-      liveLink: ''
+      liveLink: '',
+      status: 'in-progress'
     }
   ]
 
@@ -48,6 +50,7 @@ const Projects = () => {
             technologies={project.technologies}
             githubLink={project.githubLink}
             liveLink={project.liveLink}
+            status={project.status}
           />
         ))}
 
