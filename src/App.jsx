@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Education from './sections/Education'
 import Contact from './sections/Contact'
 import Footer from './components/Footer'
+import MiniProjects from './sections/MiniProjects'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <About/>
       <Skills/>
      <Projects/>
+     <MiniProjects/>
      <Education/>
      <Contact/>
      <Footer/>
